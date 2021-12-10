@@ -10,6 +10,21 @@
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="assets/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link href="/tailwind.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        .line-color {
+            background-color: #4070F4;
+        }
+
+        .text-color {
+            color: #4070F4;
+        }
+    </style>
     <title>Portofolio Febyk</title>
 </head>
 
@@ -21,7 +36,7 @@
                 <a href="#" class="nav__logo">Febyk Alek Satria</a>
             </div>
 
-            <div class="nav__menu" id="nav-menu">
+            <div class="nav__menu font-semibold" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
@@ -40,7 +55,7 @@
 
     <main class="l-main">
         <!--===== HOME =====-->
-        <section class="home bd-grid" id="home">
+        <section class="home bd-grid font-bold" id="home">
             <div class="home__data">
                 <h1 class="home__title">Hi,I'am <span class="home__title-color">Febyk</span><br> Frontend<br />
                     Developer</h1>
@@ -49,7 +64,8 @@
             </div>
 
             <div class="home__social">
-                <a href="www.linkedin.com/in/febykaleksatria" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="www.linkedin.com/in/febykaleksatria" class="home__social-icon"><i
+                        class='bx bxl-linkedin'></i></a>
                 <a href="" class="home__social-icon"><i class='bx bxl-github'></i></a>
             </div>
 
@@ -60,162 +76,582 @@
 
         <!--===== ABOUT =====-->
         <section class="about section " id="about">
-            <h2 class="section-title">About</h2>
+            <h2 class="font-bold text-5xl text-center uppercase">About</h2>
 
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/tentang.jpg" alt="">
-                </div>
-
-                <div>
-                    <h2 class="about__subtitle">I'am Febyk</h2>
-                    <p class="about__text">Saya Mahasiswa S1 Teknik informatika UNSRI, memiliki komitmen untuk menyelesaikan masalah dalam suatu pekerjaan, selama berkuliah
-                        saya memeiliki beberapa penghargaan regional, nasional dan internasional, selama berkuliah saya juga pernah mengerjakan proyek besar pengembangan web 
-                        seperti project PWA Manajemen Storage System dengan React JS untuk salah satu perusahaan startup di Palembang, project Web-CAT dengan
-                        CodeIgniter 3 yang digunakan pada instansi untuk menguji kepegawaian, dan sekarang saya mencoba untuk membangun sebuah startup web builder. Saya juga berpengalaman dibidang Desain
-                        dibuktikan dengan beberapa penghargaan yang saya dapatkan dengan mendesain menggunakan Photoshop
-                    </p>
-                </div>
+            <div class="about__container">
+                <figure class="w-10/12 md:flex bg-white shadow-sm rounded-xl p-8 md:p-0 mx-auto">
+                    <img class="w-72 h-80 md:w-96 md:h-auto rounded-full md:rounded-none mx-auto"
+                        src="assets/img/profil2.jpg" alt="profil">
+                    <div class="pt-6 md:p-8 md:text-left space-y-4">
+                        <blockquote>
+                            <p class="text-lg font-semibold">
+                                “Saya Mahasiswa S1 Teknik informatika UNSRI, memiliki komitmen untuk
+                                menyelesaikan masalah dalam suatu pekerjaan, selama berkuliah
+                                saya memeiliki beberapa penghargaan regional, nasional dan internasional, selama
+                                berkuliah saya
+                                juga pernah mengerjakan proyek besar pengembangan web
+                                seperti project PWA Manajemen Storage System dengan React JS untuk salah satu perusahaan
+                                startup
+                                di Palembang, project Web-CAT dengan
+                                CodeIgniter 3 yang digunakan pada instansi untuk menguji kepegawaian, dan sekarang saya
+                                mencoba
+                                untuk membangun sebuah startup web builder. Saya juga berpengalaman dibidang Desain
+                                dibuktikan dengan beberapa penghargaan yang saya dapatkan dengan mendesain menggunakan
+                                Photoshop
+                                .”
+                            </p>
+                        </blockquote>
+                        <figcaption class="font-medium">
+                            <div class="text-cyan-600">
+                                Febyk Alek Satria
+                            </div>
+                            <div class="text-gray-500">
+                                Frontend Developer, Indonesia
+                            </div>
+                        </figcaption>
+                    </div>
+                </figure>
             </div>
         </section>
 
         <!--===== SKILLS =====-->
         <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
 
-            <div class="skills__container bd-grid">
-                <div>
-                    <p class="skills__text"></p>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML</span>
-                        </div>
+            <h2 class="font-bold text-5xl text-center">SKILLS</h2>
+
+
+            <div id="skill" class="grid grid-cols-1 md:grid-cols-3 bg-white px-4 md:py-8 md:px-8 m-16 rounded-lg">
+                <div class="max-w-sm shadow-md px-4 py-4 bg-white m-3 text-center rounded-lg">
+                    <i class="fas fa-laptop-code text-color fa-5x mb-6"></i>
+                    <div class="p-4 font-semibold">
+                        <button
+                            class="hover:bg-blue-700 line-color text-white font-bold text-lg md:text-xl mb-6 px-4 py-2 shadow-md rounded-tl-lg rounded-br-lg"
+                            disabled>Pemograman</button>
+                        <hr class="text-gray-600 mb-2">
+                        <p class="text-gray-600 text-base mb-2">Java</p>
+                        <p class="text-gray-600 text-base mb-2">JavaScript</p>
+                        <p class="text-gray-600 text-base mb-2">PHP</p>
+                        <p class="text-gray-600 text-base mb-2">HTML</p>
+                        <p class="text-gray-600 text-base mb-2">CSS</p>
                     </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <!-- <i class="fa fa-coffee"></i> -->
-                            <i class="fab fa-php skills__icon"></i>
-                            <span class="skills__name">PHP</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-javascript skills__icon'></i>
-                            <span class="skills__name">JAVASCRIPT</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-css3 skills__icon'></i>
-                            <span class="skills__name">CSS, SCSS, TAILWIND</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <iconify-icon class="skills__icon" data-icon="simple-icons:codeigniter"></iconify-icon>
-                            <span class="skills__name">CodeIgniter</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-react skills__icon'></i>
-                            <span class="skills__name">REACT JS</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class="fab fa-java skills__icon"></i>
-                            <span class="skills__name">JAVA</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-adobe skills__icon'></i>
-                            <span class="skills__name">Photoshop</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-figma skills__icon'></i>
-                            <span class="skills__name">FIGMA</span>
-                        </div>
+                    <div class="px-2 py-4">
+
                     </div>
                 </div>
-
-                <div>
-                    <img src="assets/img/skill1.jpg" alt="" class="skills__img">
+                <div class="max-w-sm shadow-md px-4 py-4 bg-white m-3 text-center rounded-lg">
+                    <i class="fas fa-pencil-ruler text-color fa-5x mb-6"></i>
+                    <div class="p-4 font-semibold">
+                        <button
+                            class="hover:bg-blue-700 line-color text-white font-bold text-lg md:text-xl mb-6 px-4 py-2 shadow-md rounded-tl-lg rounded-br-lg"
+                            disabled>Framework/Library</button>
+                        <hr class="text-gray-600 mb-2">
+                        <p class="text-gray-600 text-base mb-2">React JS/Next JS</p>
+                        <p class="text-gray-600 text-base mb-2">Node JS</p>
+                        <p class="text-gray-600 text-base mb-2">Express JS</p>
+                        <p class="text-gray-600 text-base mb-2">Codeigniter</p>
+                        <p class="text-gray-600 text-base mb-2">Laravel</p>
+                        <p class="text-gray-600 text-base mb-2">Tailwind</p>
+                        <p class="text-gray-600 text-base mb-2">Boostrap</p>
+                    </div>
+                </div>
+                <div class="max-w-sm shadow-md px-4 py-4 bg-white m-3 text-center rounded-lg">
+                    <i class="fas fa-database text-color fa-5x mb-6"></i>
+                    <div class="p-4 font-semibold">
+                        <button
+                            class="hover:bg-blue-700 line-color text-white font-bold text-lg md:text-xl mb-6 px-4 py-2 shadow-md rounded-tl-lg rounded-br-lg"
+                            disabled>Database</button>
+                        <hr class="text-gray-600 mb-2">
+                        <p class="text-gray-600 text-base mb-2">MySQL</p>
+                        <p class="text-gray-600 text-base mb-2">SQLite</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!--===== WORK =====-->
-        <section class="about section " id="Work">
-            <h2 class="section-title">Work</h2>
+        <section class="about section" id="Work">
+            <h2 class="font-bold text-5xl text-center uppercase">Work</h2>
+            <div class="px-10  md:px-8 flex item-center">
+                <div class="mx-auto flex flex-wrap space-x-20">
 
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <h2 class="about__subtitle">DIGIFILE</h2>
-                    <img src="assets/img/Digifile.jpg" alt="">
-                    <img src="assets/img/Digifile2.jpg" alt="">
-                    <img src="assets/img/Digifile3.jpg" alt="">
-                </div>
-
-                <div>
-                    <p class="about__text">
-                        DIGITAL CREATIVE ELECTRONIC FILE STORAGE SYSTEM (DIGIFILE), yaitu Progressive Web Application
-                        (PWA) yang berfungsi sebagai sistem penyimpanan dan menerapkan metode Agile. DIGIFILE dibangun
-                        menggunakan library javascript React JS, API Go language, dan postgrase, DIGIFILE memiliki
-                        kemampuan untuk melakukan CRUD (create, read, update,dan delete) untuk file atau folder, juga
-                        memiliki sistem pemantauan realtime untuk administrator. Website ini dibangun dalam waktu satu
-                        bulan pada januari 2021 pada salah satu kantor di Palembang.
-                    </p>
+                    <!-- Project 1 -->
+                    <div class="min-h-72 py-6 flex flex-col justify-center sm:py-12">
+                        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-sky-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+                            </div>
+                            <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+                                <div class="max-w-md mx-auto">
+                                    <h1 class="w-full text-2xl font-bold text-center text-gray-700">DIGIFILE</h1>
+                                    <div>
+                                        <div id="digifile" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                            <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#digifile" data-bs-slide-to="0"
+                                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#digifile" data-bs-slide-to="1"
+                                                    aria-label="Slide 2"></button>
+                                                <button type="button" data-bs-target="#digifile" data-bs-slide-to="2"
+                                                    aria-label="Slide 3"></button>
+                                            </div>
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="assets/img/Digifile.jpg" class="d-block  rounded-lg w-100"
+                                                        alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/img/Digifile2.jpg"
+                                                        class="d-block rounded-lg  w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/img/Digifile3.jpg"
+                                                        class="d-block rounded-lg  w-100" alt="...">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#digifile" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#digifile" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="divide-y divide-gray-200">
+                                        <div
+                                            class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                                            <p>Sistem penyimpanan secara digital untuk membantu mempermudah dan
+                                                mengamankan file perusahaan. PWA ini dikembangkan dengan beberapa
+                                                teknologi terbaru :</p>
+                                            <ul class="list-disc space-y-2">
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        Menggunakan bahasa pemograman
+                                                        <code class="text-sm font-bold text-gray-900">JavaScript</code>
+                                                        dengan library
+                                                        <code class="text-sm font-bold text-gray-900">React JS</code>
+                                                    </p>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        memperindah tampilan dengan framework
+                                                        <code class="text-sm font-bold text-gray-900">Tailwind</code>
+                                                    </p>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        Mengurusi data dan mengontrol data dengan
+                                                        <code class="text-sm font-bold text-gray-900">Go-lang</code>
+                                                    </p>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        Database yang digunakan yaitu
+                                                        <code class="text-sm font-bold text-gray-900">PostgreSQL</code>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <p>Dalam project ini saya memegang penuh pada bagian Frontend developer.</p>
+                                            <a class="badge bg-secondary text-decoration-none link-light"
+                                                aria-disabled="">Freelance</a>
+                                            <a class="badge bg-success text-decoration-none link-light"
+                                                aria-disabled="">Done</a>
+                                        </div>
+                                        <div class=" pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
+                                            <p>
+                                                <a href="https://github.com/FebykAlekSatria/DIGIFILE"
+                                                    class="text-cyan-600 hover:text-cyan-700"> Read the docs &rarr;
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- project 2 -->
+                    <div class="min-h-72 py-6 flex flex-col justify-center sm:py-12">
+                        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-sky-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+                            </div>
+                            <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+                                <div class="max-w-md mx-auto">
+                                    <h1 class="w-full text-2xl font-bold text-center text-gray-700">WEB-CAT</h1>
+                                    <div>
+                                        <div id="cat" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                            <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#cat" data-bs-slide-to="0"
+                                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#cat" data-bs-slide-to="1"
+                                                    aria-label="Slide 2"></button>
+                                                <button type="button" data-bs-target="#cat" data-bs-slide-to="2"
+                                                    aria-label="Slide 3"></button>
+                                            </div>
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="assets/img/CAT.JPG" class="d-block  rounded-lg w-100"
+                                                        alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/img/CAT2.JPG" class="d-block rounded-lg  w-100"
+                                                        alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/img/CAT3.JPG" class="d-block rounded-lg  w-100"
+                                                        alt="...">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#cat"
+                                                data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#cat"
+                                                data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="divide-y divide-gray-200">
+                                        <div
+                                            class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                                            <p>Web-Cat berfungsi untuk mengevaluasi pengetahuan dari instansi PGRI yang
+                                                ada di SUMSEL. Web ini dikembangkan dengan beberapa
+                                                teknologi terbaru :</p>
+                                            <ul class="list-disc space-y-2">
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        Menggunakan bahasa pemograman
+                                                        <code class="text-sm font-bold text-gray-900">PHP</code>
+                                                        dengan framework
+                                                        <code class="text-sm font-bold text-gray-900">CodeIgniter</code>
+                                                    </p>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        memperindah tampilan dengan framework
+                                                        <code class="text-sm font-bold text-gray-900">Boostrap</code>
+                                                    </p>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        Mengurusi data dan mengontrol data dengan
+                                                        <code class="text-sm font-bold text-gray-900">MySQL</code>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <p>Dalam project ini saya memegang penuh pada framework CodeIgniter.
+                                            </p>
+                                            <a class="badge bg-secondary text-decoration-none link-light"
+                                                aria-disabled="">Freelance</a>
+                                            <a class="badge bg-success text-decoration-none link-light"
+                                                aria-disabled="">Done</a>
+                                        </div>
+                                        <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
+                                            <p>
+                                                <a href="https://github.com/FebykAlekSatria/ProjectWEBCAT"
+                                                    class="text-cyan-600 hover:text-cyan-700"> Read the docs &rarr;
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="px-10  md:px-8 flex item-center">
+                <div class="mx-auto flex flex-wrap space-x-20">
 
-            
-            
-            <div class="about__container bd-grid">
-                <div>
-                    <p class="about__text">
-                        WEB – CAT (the Web-based Center for Automated Testing) adalah web yang dibangun untuk salah satu
-                        instansi yang ada di daerah sumsel untuk pengujian guru, web dibangun dengan mengguanakan
-                        framework codeigniter 3, dan database mysql, memiliki kemampuan CRUD (create, read, update,dan
-                        delete) untuk membuat soal atau pun peserta ujian secara mudah dan efisien. website ini dibangun
-                        selama 10 hari
-                        pada di bulan Juni 2021
-                    </p>
-                </div>
-
-                <div class="about__img">
-                    <h2 class="about__subtitle">WEB-CAT</h2>
-                    <img src="assets/img/CAT.JPG" alt="">
-                    <img src="assets/img/CAT2.JPG" alt="">
-                    <img src="assets/img/CAT3.JPG" alt="">
+                    <!-- Project 3 -->
+                    <div class="min-h-72 py-6 flex flex-col justify-center sm:py-12">
+                        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-sky-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+                            </div>
+                            <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+                                <div class="max-w-md mx-auto">
+                                    <h1 class="w-full text-2xl font-bold text-center text-gray-700">BLOG-REVIEWERS</h1>
+                                    <div>
+                                        <div id="review" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                            <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#review" data-bs-slide-to="0"
+                                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#review" data-bs-slide-to="1"
+                                                    aria-label="Slide 2"></button>
+                                            </div>
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="assets/img/review.jpg" class="d-block  rounded-lg w-100"
+                                                        alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/img/review2.jpg" class="d-block rounded-lg  w-100"
+                                                        alt="...">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#review"
+                                                data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#review"
+                                                data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="divide-y divide-gray-200">
+                                        <div
+                                            class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                                            <p>Blog Reviwer merupakan sebuah website untuk meriview barang untuk menarik
+                                                pembeli. Web ini dikembangkan dengan beberapa
+                                                teknologi terbaru :</p>
+                                            <ul class="list-disc space-y-2">
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        Menggunakan bahasa pemograman
+                                                        <code class="text-sm font-bold text-gray-900">PHP</code>
+                                                        dengan framework
+                                                        <code class="text-sm font-bold text-gray-900">LARAVEL</code>
+                                                    </p>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        memperindah tampilan dengan framework
+                                                        <code class="text-sm font-bold text-gray-900">Boostrap</code>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <p>Dalam project ini saya memegang penuh pengembangan.</p>
+                                            <a class="badge bg-secondary text-decoration-none link-light"
+                                                aria-disabled="">Personal</a>
+                                            <a class="badge bg-success text-decoration-none link-light"
+                                                aria-disabled="">Done</a>
+                                        </div>
+                                        <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
+                                            <p>
+                                                <a href="https://github.com/FebykAlekSatria/Affilate-program-LARAVEL"
+                                                    class="text-cyan-600 hover:text-cyan-700"> Read the docs &rarr;
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- project 4 -->
+                    <div class="min-h-72 py-6 flex flex-col justify-center sm:py-12">
+                        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-sky-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+                            </div>
+                            <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+                                <div class="max-w-md mx-auto">
+                                    <h1 class="w-full text-2xl font-bold text-center text-gray-700">QNA</h1>
+                                    <div>
+                                        <div id="qna" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                            <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#qna" data-bs-slide-to="0"
+                                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#qna" data-bs-slide-to="1"
+                                                    aria-label="Slide 2"></button>
+                                            </div>
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="assets/img/qna2.jpg" class="d-block  rounded-lg w-100"
+                                                        alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="assets/img/qna1.jpg" class="d-block rounded-lg  w-100"
+                                                        alt="...">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#qna"
+                                                data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#qna"
+                                                data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="divide-y divide-gray-200">
+                                        <div
+                                            class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                                            <p>QNA merupakan tempat dimana kita mempertanyakan sesuatu kepada orang dan
+                                                orang akan menjawabnya tanpa edentitas ataupun dengan edentitas
+                                                sebenarnya. Web ini dikembangkan dengan beberapa
+                                                teknologi terbaru :</p>
+                                            <ul class="list-disc space-y-2">
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        Menggunakan bahasa pemograman
+                                                        <code class="text-sm font-bold text-gray-900">JavaScript</code>
+                                                        dengan framework
+                                                        <code class="text-sm font-bold text-gray-900">Next JS</code>
+                                                    </p>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        memperindah tampilan dengan framework
+                                                        <code class="text-sm font-bold text-gray-900">Boostrap</code>
+                                                    </p>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        Mengurusi data dan mengontrol data dengan
+                                                        <code class="text-sm font-bold text-gray-900">MySQL</code>
+                                                        dan
+                                                    </p>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="h-6 flex items-center sm:h-7">
+                                                        <svg class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    <p class="ml-2">
+                                                        Mengurus control data dengan API
+                                                        <code class="text-sm font-bold text-gray-900">Express JS</code>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <p>Dalam project ini saya memegang penuh kendali.
+                                            </p>
+                                            <a class="badge bg-secondary text-decoration-none link-light"
+                                                aria-disabled="">Personal</a>
+                                            <a class="badge bg-danger text-decoration-none link-light"
+                                                aria-disabled="">process</a>
+                                        </div>
+                                        <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
+                                            <p>
+                                                <a href="https://github.com/FebykAlekSatria/QNA_JS"
+                                                    class="text-cyan-600 hover:text-cyan-700"> Read the docs &rarr;
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <h2 class="about__subtitle">WEB PORTOFOLIO</h2>
-                    <img src="assets/img/Portofolio.JPG" alt="">
-                    <img src="assets/img/Portofolio2.JPG" alt="">
-                    <img src="assets/img/Portofolio3.JPG" alt="">
-                </div>
-                <div>
-                    <p class="about__text">
-                        WEB PORTOFOLIO adalah web untuk memperkenalkan/memberi informasi tentang saya pribadi seperti
-                        informasi pribadi,
-                        kemampuan, penghargaan dan kontak saya. Web ini bersifat statis dengan html dan css
-                    </p>
-                </div>
-            </div>
-            
         </section>
 
         <!--===== ACHIEVEMENT =====-->
         <section class="work section" id="Achievement">
-            <h2 class="section-title">Achievement</h2>
+            <h2 class="font-bold text-5xl text-center uppercase mb-10">Achievement</h2>
 
             <div class="work__container bd-grid">
                 <div class="work__img">
@@ -261,7 +697,7 @@
     <!--===== FOOTER =====-->
     <footer class="footer">
         <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="font-bold text-5xl text-center uppercase">Contact</h2>
             <p class="footer__title">Febyk Alek Satria</p>
             <div class="footer__social">
                 <!-- <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a> -->
@@ -281,6 +717,9 @@
 
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
